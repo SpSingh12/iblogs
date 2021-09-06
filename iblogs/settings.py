@@ -35,7 +35,7 @@ EMAIL_HOST_USER = "suryapratapsingh3802@gmail.com"
 EMAIL_HOST_PASSWORD = "spbannaindianarmy"
 EMAIL_USE_TLS = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -136,7 +136,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
