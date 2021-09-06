@@ -92,7 +92,7 @@ DATABASES = {
         'NAME':  'iblogs',
         'USER': 'root',
         'PASSWORD': 'surya',
-        'HOST': 'localhost',
+        'HOST': 'http://heroku.com/',
         'PORT': '3306',
     }
 }
