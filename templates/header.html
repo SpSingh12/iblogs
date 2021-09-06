@@ -1,0 +1,76 @@
+{% load static %}
+<style>
+  .i{
+    width: 40px;
+    height: 40px;
+  }
+
+  
+</style>
+
+
+<div id="preloader"></div>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background: #343a40!important;">
+  <div class="container-fluid">
+    <a href="/" class="navbar-brand ">
+    <img src="{% static '\logo.png' %}" class="img-fluid i" alt="">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav  me-auto ps-3 text-center">
+        <li class="nav-item">
+          <a class="nav-link active" style="font-size:17px" href="/">HOME</a>
+        </li>
+ 
+        <li class="nav-item">
+          <a class="nav-link active" style="font-size:17px" href="{% url 'about' %}">ABOUT</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" style="font-size:17px" href="{% url 'blog' %}">BLOG</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" style="font-size:17px" href="{% url 'contact' %}">CONTACT ME</a>
+        </li>
+
+                
+
+  
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false" style="font-size:17px">
+            CATEGORY
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+            {% for cat in cats %}
+            <li><a class="dropdown-item" href="/category/{{cat.url}}">{{cat.title}}</a></li>
+            {% endfor %}
+        
+
+          </ul>
+        </li> -->
+       
+      </ul>
+      <form class="d-flex ">
+        <a href="/admin" class="btn btn-danger" type="submit">ADMIN</a>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+{% for message in messages %}
+<div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+  <strong>Message</strong> {{message}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+
+  </button>
+</div>
+{% endfor %}
+

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} WELCOME TO IBLOG {% endblock %}
+{%block content  %}
+
+<style>
+    .width{
+        width: 70%;
+    }
+</style>
+
+
+
+<div id="contact" >
+    <div class="container width">
+        <div class="row py-5">
+            <dic class="col-12">
+                <h3 class="text-capitalize" style="font-size: 1.75rem;font-weight:bolder">contact me!</h3>
+
+                <form action="{% url 'contact' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group pb-3">
+                        <label for="name" class="form-label text-capitalize">your name</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Enter Your Name">
+                    </div>
+
+                    <div class="form-group pb-3">
+                        <label for="email" class="form-label text-capitalize">your email</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter Your Email">
+                    </div>
+
+                    <div class="form-group pb-3">
+                        <label for="phone" class="form-label text-capitalize">your phone number</label>
+                        <input type="number" id="phone" name="phone" class="form-control" placeholder="Enter Your Phone Number">
+                    </div>
+
+                    <div class="form-group pb-3">
+                        <label for="describe" class="form-label text-capitalize">describe waht you want to contact me for here</label>
+                       <textarea name="describe" id="describe" class="form-control" cols="10" rows="2"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-danger my-2">Submit</button>
+                </form>
+
+            </dic>
+        </div>
+    </div>
+</div> -->
+
+
+
+{% endblock %}

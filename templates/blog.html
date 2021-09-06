@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} WELCOME TO IBLOG {% endblock %}
+{%block content  %}
+
+<!-- <style>
+    body {
+        font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    }
+</style> -->
+
+
+<div id="backend">
+    <div class="container py-auto">
+        <div class="row mt-5">
+            <div class="col-12">
+                {% for p in posts %}
+                <div class="row my-4 ">
+                    <div class="col-12 col-md-8">
+                       <h3 class="text-capitalize"> {{p.title}}</h3>
+                       <p>
+                        {{p.dis}}
+                       </p>
+                        <div id="c" class="mx-auto">
+                            <h1> <a href="/blog/{{p.url}}" class="btn btn-outline-danger mb-5 mx-auto" >READ
+                                    MORE</a></h1>
+                        </div>
+                      
+                    </div>
+    
+    
+                    <div class="col-12 col-md-4 mx-auto">
+                        <img src="/media/{{p.image}}" class="img-fluid mx-auto" alt="">
+                    </div>
+                </div>
+                <div class="dropdown-divider border border-4"></div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+{% endblock %}

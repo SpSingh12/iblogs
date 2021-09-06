@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://i.pinimg.com/originals/79/a3/84/79a384c3c449ad01b0e57e790807b2c0.gif);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+}
+.hero{
+    min-height: 100vh;
+
+}
+
